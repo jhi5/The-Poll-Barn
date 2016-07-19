@@ -1,0 +1,21 @@
+.container
+	.well
+		form.form-horizontal(name="signupForm")
+			fieldset
+				legend Create a New Poll
+				.form-group
+					label.col-md-2.control-label(for='title') Poll Title
+					.col-md-10
+						input.form-control(name="title", type="text", placeholder="Title", ng-model='polltitle')
+				.form-group(data-ng-repeat="option in options")
+					label.col-md-2.control-label(for='option') Poll Option {{option.id}}
+					.col-md-10
+						input.form-control(name="option", type="text", placeholder="Option", ng-model="option.choice")
+				.form-group
+					.col-md-10.col-md-offset-2
+						.pull-right
+							button.btn.btn-success(ng-click="addNewOption()") Add New Option
+							| &nbsp;
+							button.btn.btn-primary(ng-click='newPoll()', ng-disabled='signupForm.$invalid') Submit
+							| &nbsp;
+							a.btn.btn-default(href='/') Cancel

@@ -1,0 +1,36 @@
+.container
+	.row
+		.col-md-8.col-md-offset-4
+			h1 {{poll.title}}
+			h3(ng-show="poll.title") Created by {{poll.createdBy}}
+			h3 Published on {{poll.createdOn}}
+			div(google-chart, chart='myChartObject', style='height:400px; width:450px;')
+			h3 Current Votes
+			div(ng-repeat="option in poll.options")
+				{{option.choice}} : {{option.votes}}
+		.col-md-8.col-md-offset-4
+			h2 Would You Like To Vote?
+			form(name="curPoll")
+				fieldset
+					legend {{poll.title}}
+					.from-group(ng-repeat="option in poll.options")
+						input(type="radio", ng-model="radioValue.selected", id="{{option.choice}}", name="choice", value="{{option.id}}")
+						&nbsp; {{option.choice}}
+					.form-group
+						.pull-right
+							button.btn.btn-success(ng-show="showAddButton()" ng-click="openModal()") Add Poll Option
+							| &nbsp
+							button.btn.btn-danger(ng-show="showDeleteButton()" ng-click="deleteThisPoll()") Delete Poll
+							| &nbsp;
+							button.btn.btn-primary(ng-click="submitVotes()") Submit
+		.modalClass(modal='showModal', close='closeModal()')
+			.modal-header
+				h2 Add A New Voting Option To This Poll
+			.modal-body
+				form.form-horizontal(name="signupForm")
+					fieldset
+						.form-group
+							input.form-control.shorterInput(name="option", type="text", placeholder="New Option", ng-model="newOption")
+			.modal-footer
+				button.btn.btn-success(ng-click='addNewOptions()') Add New Option
+				button.btn(ng-click='closeModal()') Cancel

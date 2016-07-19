@@ -1,0 +1,19 @@
+.container.top-padding-med
+	h1.text-center {{currentUser}}'s Polls
+	.pull-left
+		a.btn.btn-success(href="/polls/newpoll") New Poll
+	.pull-right
+		form.form-inline
+			.form-group.margin-left-med
+				select.form-control(ng-model="sortOrder", ng-options="item.value as item.text for item in sortOptions")
+	table.table.table-hover.table-striped.table-condensed
+		thread
+			tr
+				th Title
+				th Creation Date
+			tbody
+				tr(ng-repeat="poll in userPolls | filter:searchText | orderBy:sortOrder")
+					td 
+						a(href="/polls/{{poll._id}}") {{poll.title}}
+					td {{poll.createdOn | date:"short"}}
+					

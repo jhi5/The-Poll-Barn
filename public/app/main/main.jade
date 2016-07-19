@@ -1,0 +1,25 @@
+.container
+	.jumbotron.jumbotron-fluid
+		.h1#jumbotitle.text-right The Poll Barn
+		p.lead#jumboslug.text-right &nbsp; Build, Vote & Share
+		button.btn.btn-lg.btn-primary-outline(href="/polls") See All Polls
+		br
+		br
+		button.btn.btn-lg.btn-primary-outline(href='/signup') Sign Up Today!
+	.h1.text-center Newest Polls
+	&nbsp; 
+	table.table.table-hover.table-striped.table-condensed
+		thread
+			tr
+				th Title
+				th Creation Date
+				th Created By
+			tbody
+				tr(ng-repeat="poll in polls | filter:searchText | orderBy:sortOrder")
+					td 
+						a(href="/polls/{{poll._id}}") {{poll.title}}
+					td {{poll.createdOn | date:"short"}}
+					td 
+						a(href="/users/{{poll.createdBy}}") {{poll.createdBy}}
+script(type="text/javascript", src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-57643a8dc00b7eea")
+
