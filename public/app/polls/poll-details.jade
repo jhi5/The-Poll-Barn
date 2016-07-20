@@ -23,14 +23,15 @@
 							button.btn.btn-danger(ng-show="showDeleteButton()" ng-click="deleteThisPoll()") Delete Poll
 							| &nbsp;
 							button.btn.btn-primary(ng-click="submitVotes()") Submit
-		.modalClass(modal='showModal', close='closeModal()')
-			.modal-header
-				h2 Add A New Voting Option To This Poll
-			.modal-body
-				form.form-horizontal(name="signupForm")
-					fieldset
-						.form-group
-							input.form-control.shorterInput(name="option", type="text", placeholder="New Option", ng-model="newOption")
-			.modal-footer
-				button.btn.btn-success(ng-click='addNewOptions()') Add New Option
-				button.btn(ng-click='closeModal()') Cancel
+		.col-md-8.col-md-offset-4
+			.modal-content(modal='showModal', close='closeModal()')
+				.modal-header
+					h2 Add A New Voting Option To This Poll
+				.modal-body
+					form.form-horizontal(name="signupForm")
+						fieldset
+							.form-group
+								input.form-control.shorterInput(name="option", type="text", placeholder="New Option", ng-model="newOption")
+				.modal-footer
+					button.btn.btn-success(ng-click='addNewOptions()') Add New Option
+					button.btn(ng-click='closeModal()') Cancel
