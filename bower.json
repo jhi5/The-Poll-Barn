@@ -6,20 +6,22 @@
     "J. Munford <jaemunford@gmail.com>"
   ],
   "license": "ISC",
-  "moduleType": [],
-  "homepage": "",
+  "homepage": "https://github.com/jhi5/polling",
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
+    "public/vendor",
     "test",
     "tests"
   ],
   "dependencies": {
+    "angular-mocks": "^1.5.5",
     "angular-resource": "^1.5.5",
-    "jquery": "^2.2.3",
+    "angular-route": "^1.5.5",
+    "bootstrap": "^3.3.6",
     "toastr": "^2.1.2",
-    "angular": "^1.5.5",
-    "angular-route": "^1.5.5"
+    "angular-google-chart": "^0.1.0",
+    "angular-ui": "^0.4.0"
   }
 }
