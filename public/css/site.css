@@ -8,6 +8,11 @@ body {
 .navbar-header a.navbar-brand h6 {
   color: #ccc;
 }
+
+.navbar-right{
+	margin-top: -15px;
+	margin-bottom: -20px;
+}
 footer {
   padding-left: 15px;
   padding-right: 15px;
