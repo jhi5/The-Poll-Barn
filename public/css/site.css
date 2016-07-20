@@ -9,8 +9,16 @@ body {
   color: #ccc;
 }
 
+.navbar-right{
+	margin-top: 10px;
+}
+
 .navbar{
 	font-size: 1.5rem;
+}
+.navbar button{
+  margin-left: 3px;
+  margin-right: 3px;
 }
 
 footer {
