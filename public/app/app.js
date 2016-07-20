@@ -1,4 +1,4 @@
-angular.module('app', ['ngResource', 'ngRoute', 'googlechart', 'angular-ui.bootstrap.modal']);
+angular.module('app', ['ngResource', 'ngRoute', 'googlechart']);
 
 angular.module('app').config(function($routeProvider, $locationProvider) {
 	var routeRoleChecks = {
