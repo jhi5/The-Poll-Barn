@@ -41,6 +41,7 @@ footer p {
 
 .jumbotron button:hover{
 	color: #e06262;
+	text-shadow: grey;
 }
 
 #jumbotitle{
