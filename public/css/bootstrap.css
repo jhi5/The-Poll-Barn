@@ -4333,7 +4333,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     float: none;
     width: auto;
     margin-top: 0;
-    background-color: transparent;
+    background-color: #537092;
     border: 0;
     -webkit-box-shadow: none;
     box-shadow: none;

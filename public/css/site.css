@@ -9,10 +9,10 @@ body {
   color: #ccc;
 }
 
-.navbar-right{
-	margin-top: -15px;
-	margin-bottom: -20px;
+.navbar{
+	font-size: 1.5rem;
 }
+
 footer {
   padding-left: 15px;
   padding-right: 15px;
@@ -40,7 +40,7 @@ footer p {
 }
 
 .jumbotron button:hover{
-	color: gold;
+	color: #e06262;
 }
 
 #jumbotitle{
