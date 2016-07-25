@@ -1,11 +1,14 @@
 .container
 	.jumbotron.jumbotron-fluid
-		.h1#jumbotitle.text-right The Poll Barn
-		p.lead#jumboslug.text-right &nbsp; Build, Vote & Share
-		button.btn.btn-lg.btn-primary-outline(onClick="location.href='../polls'") See All Polls
-		br
-		br
-		button.btn.btn-lg.btn-primary-outline(onClick="location.href='../signup'") Sign Up Today!
+		col-md-6
+			button.btn.btn-lg.btn-primary-outline(onClick="location.href='../polls'") See All Polls
+			br
+			button.btn.btn-lg.btn-primary-outline(onClick="location.href='../signup'") Sign Up Today!
+		col-md-6
+			.h1#jumbotitle.text-right The Poll Barn
+			p.lead#jumboslug.text-right &nbsp; Build, Vote & Share
+		
+
 	.h1.text-center Newest Polls
 	&nbsp; 
 	table.table.table-hover.table-striped.table-condensed
